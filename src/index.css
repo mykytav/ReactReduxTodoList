@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 40px;
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(51, 10, 75, 0.08)
+  );
+  overflow: hidden;
+}
+
+.divider {
+  background-color: #7b1fa2;
+}
+.fade-enter {
+  opacity: 0.01;
+  transform: translateX(-30%);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 600ms ease;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-exit-active {
+  opacity: 0.01;
+  transform: translateX(50%);
+  transition: all 600ms ease;
+}
+
+.form {
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  align-items: center;
+  padding: 25px 10px 15px 10px;
+}
+
+.input-field {
+  flex: 1;
+  margin: 0px 10px;
+}
+
+input[type='text']:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #7b1fa2;
+  box-shadow: 0 1px 0 0 #7b1fa2;
+}
+
+label.active {
+  color: #561870;
+  font-size: 1.1rem;
+}
+
+.todos {
+  padding: 20px 0px;
+  min-height: 72px;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.5px solid #7b1fa2;
+  border-radius: 10px;
+  padding: 2px 10px;
+  margin: 5px 0px;
+  transition: all 500ms ease;
+  font-weight: bold;
+  letter-spacing: 0.04rem;
+}
+
+.todo__text {
+  word-break: break-all;
+}
+
+.todo span {
+  display: flex;
+  align-items: center;
+}
+
+.todo span:hover {
+  cursor: pointer;
+}
+
+.todo i {
+  color: #ea4646;
+  font-size: 1.5rem;
+}
+
+.todos__notask {
+  text-transform: uppercase;
+  list-style-type: none;
+  text-align: center;
+  font-size: 1.5rem;
+  background: -webkit-linear-gradient(rgb(173, 2, 116), rgb(43, 73, 207));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.filters {
+  padding: 20px 0px;
+}
+
+.filters .waves-effect:hover {
+  color: #bbbbbb;
+  border-bottom: 1px solid #000;
+}
